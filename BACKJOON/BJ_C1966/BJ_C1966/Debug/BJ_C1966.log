@@ -1,0 +1,3 @@
+﻿  소스.c
+C:\Users\ikbs4\source\repos\BJ_C1966\BJ_C1966\소스.c(8,6): warning C4101: 'ptr' :참조되지 않은 지역 변수입니다.
+  BJ_C1966.vcxproj -> C:\Users\ikbs4\source\repos\BJ_C1966\Debug\BJ_C1966.exe

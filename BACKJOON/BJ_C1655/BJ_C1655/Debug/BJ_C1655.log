@@ -1,0 +1,4 @@
+﻿  소스.c
+C:\Users\ikbs4\source\repos\BJ_C1655\BJ_C1655\소스.c(16,9): warning C4013: 'insert'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\ikbs4\source\repos\BJ_C1655\BJ_C1655\소스.c(48,19): warning C4013: 'RetParent'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  BJ_C1655.vcxproj -> C:\Users\ikbs4\source\repos\BJ_C1655\Debug\BJ_C1655.exe
