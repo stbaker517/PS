@@ -1,6 +1,7 @@
 #include<iostream>
 #include<map>
 #include<algorithm>
+#include<stack>
 using namespace std;
 int arr[1000000];
 int dp[1000000];
@@ -15,27 +16,31 @@ int main(){
         cin>>arr[i];
     }
     dp[0]=arr[0];
-
+    int start=0;
     int dplen=1;
     for(int i=1;i<n;i++)
     {   
         int idx=lower_bound(dp,dp+dplen,arr[i])-dp;
-        cout<<idx<<" ";
-        if(dplen>idx){
-            dp[idx]=arr[i];
-        }
-        else if(dplen==idx){
-            dp[idx]=arr[i];
-            order[i]=idx;
-            dplen++;
-        }
-        for(int l=0;l<dplen;l++){
-            printf("%d ",dp[l]);
-        }
-        printf("\n");
+        
+        order[i]=idx;
+        dp[idx]=arr[i];
+        if(idx==dplen)dplen++;
+
 
     }
-
+    cout<<dplen<<"\n";
+    dplen--;
+    stack<int>st;
+    for(int i=n-1;i>=0;i--){
+        if(order[i]==dplen){
+            dplen--;
+            st.push(arr[i]);
+        }
+    }
+    while(!st.empty()){
+        cout<<st.top()<<" ";
+        st.pop();
+    }
 
     return 0;
 }
