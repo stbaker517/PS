@@ -16,7 +16,7 @@ void f(){
         int L=get<0>(top);
         int R=get<1>(top);
         int l=get<2>(top);
-       
+        
         Q.pop(); if(len!=0&&l>=len)continue;
         for(pic nextL:V[L]){
             for(pic nextR:V[R]){
