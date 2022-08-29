@@ -42,6 +42,7 @@ void printTuple(tlll t)
     printf("%ld %ld %ld", get<0>(t), get<1>(t), get<2>(t));
     printf("\n");
 }
+ll getCost(tlll a, tlll b);
 int main()
 {
     ios::sync_with_stdio(0);
@@ -71,4 +72,9 @@ int main()
         printTuple(i);
     }
     printf("\n\n");
+}
+
+ll getCost(tlll a, tlll b)
+{
+    return min(abs(get<0>(a) - get<0>(b)), min(abs(get<1>(a) - get<1>(b)), abs(get<2>(a) - get<2>(b))));
 }
